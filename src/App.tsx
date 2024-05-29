@@ -5,6 +5,7 @@ import {HashRouter, Route, Routes} from "react-router-dom";
 import Homepage from "./pages/Homepage.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
+import Courses from "./pages/Courses.tsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/" element={<Homepage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/courses" element={<Courses />} />
             </Routes>
         </HashRouter>
         <AppFooter />

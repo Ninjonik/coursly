@@ -50,7 +50,7 @@ function NavList() {
                 color="blue-gray"
                 className="p-1 font-bold"
             >
-                <Link to={"/courses"}><Button color={location.pathname === "/courses" ? "amber" : "purple"}>Kurzy</Button></Link>
+                <Link to={"/courses"}><Button color={location.pathname === "/courses" ? "deep-purple" : "purple"}>Kurzy</Button></Link>
             </Typography>
         </ul>
     );
