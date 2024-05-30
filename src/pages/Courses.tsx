@@ -1,6 +1,7 @@
 import CourseCard from "../components/courses/CourseCard.tsx";
 import SmallCourseCard from "../components/courses/SmallCourseCard.tsx";
-import {Carousel} from "@material-tailwind/react";
+import {Button, Carousel} from "@material-tailwind/react";
+import {Link} from "react-router-dom";
 
 export default function Courses() {
 
@@ -10,7 +11,6 @@ export default function Courses() {
                 <div className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
                     <div className={"h-1/3 flex flex-col gap-8 justify-center items-center"}>
                         <h2 className={"text-5xl font-bold"}>Ponuka kurzov</h2>
-                        <h3 className={"text-xl"}>V našej ponuke kurzov si každý nájde to, čo ho posunie ďalej</h3>
                     </div>
                 </div>
             </article>
@@ -40,7 +40,8 @@ export default function Courses() {
                             title={"OOP Fundamentals"}
                             description={"Základy dobrých kodérov."}/>
             </article>
-            <article className={"w-full"}>
+            <Link to={"/courses/all"}><Button className={"w-96"} color={"deep-purple"}>Zobraziť ponuku všetkých kurzov</Button></Link>
+            <article className={"w-full flex flex-col gap-4 items-center"}>
                 <Carousel className="rounded-xl" autoplay={true}>
                     <img
                         src="img/fullstack.png"

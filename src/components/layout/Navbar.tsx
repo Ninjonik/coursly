@@ -71,7 +71,7 @@ export default function AppNavbar() {
     }, []);
 
     return (
-        <Navbar fullWidth={true} className="w-screen px-6 py-3" shadow={false}>
+        <Navbar fullWidth={true} className="w-screen px-6 py-3 sticky top-0 z-10" shadow={false}>
             <div className="flex items-center justify-between text-blue-gray-900">
                 <Typography
                     as="a"
