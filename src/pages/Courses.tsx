@@ -2,17 +2,19 @@ import CourseCard from "../components/courses/CourseCard.tsx";
 import SmallCourseCard from "../components/courses/SmallCourseCard.tsx";
 import {Button, Carousel} from "@material-tailwind/react";
 import {Link} from "react-router-dom";
+import { motion } from "framer-motion";
+import {childVariants, routeVariants} from "../Routes.tsx";
 
 export default function Courses() {
 
     return (
-        <main className={"w-full flex flex-col gap-32 my-16"}>
+        <motion.main variants={routeVariants} initial="initial" animate="final" className={"w-full flex flex-col gap-32 my-16"}>
             <article className={"flex flex-col gap-16 items-center"}>
-                <div className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
+                <motion.div variants={childVariants} initial="initial" animate="final" className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
                     <div className={"h-1/3 flex flex-col gap-8 justify-center items-center"}>
                         <h2 className={"text-5xl font-bold"}>Ponuka kurzov</h2>
                     </div>
-                </div>
+                </motion.div>
             </article>
             <article className={"flex flex-col md:flex-row gap-16 w-full"}>
                 <CourseCard avatarSrc={"img/avatars/256_9.png"} name={"Katarína Kováčová"}
@@ -40,7 +42,7 @@ export default function Courses() {
                             title={"OOP Fundamentals"}
                             description={"Základy dobrých kodérov."}/>
             </article>
-            <Link to={"/courses/all"}><Button className={"w-96"} color={"deep-purple"}>Zobraziť ponuku všetkých kurzov</Button></Link>
+            <Link to={"/courses/all"}><Button className={"w-72 md:w-96"} color={"deep-purple"}>Zobraziť ponuku všetkých kurzov</Button></Link>
             <article className={"w-full flex flex-col gap-4 items-center"}>
                 <Carousel className="rounded-xl" autoplay={true}>
                     <img
@@ -60,6 +62,6 @@ export default function Courses() {
                     />
                 </Carousel>
             </article>
-        </main>
+        </motion.main>
     )
 }

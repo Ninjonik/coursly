@@ -13,8 +13,8 @@ interface SmallCourseCardProps {
 
 export default function SmallCourseCardProps({avatarSrc, cardImageSrc, title, description}: SmallCourseCardProps) {
     return (
-        <Card className="max-w-[24rem] overflow-hidden flex flex-row h-16 items-center gap-4 pl-4">
-            <div className={"flex flex-row py-4 gap-4"}>
+        <Card className="w-full md:max-w-[24rem] overflow-hidden flex flex-row h-32 md:h-16 items-center justify-between gap-4 pl-4">
+            <div className={"flex flex-row py-4 gap-4 items-center"}>
                 <Avatar
                     size="lg"
                     variant="circular"
@@ -33,7 +33,7 @@ export default function SmallCourseCardProps({avatarSrc, cardImageSrc, title, de
             <img
                 src={cardImageSrc}
                 alt={title}
-                className={"w-16 h-16"}
+                className={"w-32 h-32 md:w-16 md:h-16"}
             />
         </Card>
     );

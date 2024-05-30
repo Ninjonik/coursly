@@ -11,9 +11,9 @@ import {Link, useLocation} from "react-router-dom";
 function NavList() {
     const location = useLocation();
     const className = "text-purple-500";
-    console.log(location);
+
     return (
-        <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 items-center">
+        <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 items-center sticky z-10 bg-white rounded-lg">
             <Typography
                 as="li"
                 variant="small"
@@ -71,7 +71,7 @@ export default function AppNavbar() {
     }, []);
 
     return (
-        <Navbar fullWidth={true} className="w-screen px-6 py-3 sticky top-0 z-10" shadow={false}>
+        <Navbar fullWidth={true} className="w-screen px-6 py-3 sticky top-0 z-10 custom-navbar h-16 mb-16" shadow={false}>
             <div className="flex items-center justify-between text-blue-gray-900">
                 <Typography
                     as="a"

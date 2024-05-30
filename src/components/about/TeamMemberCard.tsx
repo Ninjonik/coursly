@@ -10,15 +10,15 @@ interface TeamMemberProps {
 
 export default function TeamMemberCard({ name, role, description, avatarSrc, type }: TeamMemberProps) {
     return (
-        <Card color="transparent" shadow={false} className={`w-full w-1/2 p-4 ${type && "place-self-end"}`}>
+        <Card color="transparent" shadow={false} className={`w-full w-2/3 p-4 ${type && "place-self-end"}`}>
             <CardBody className="mb-6 p-0 flex flex-row gap-4">
-                <Avatar size="lg" variant="circular" src={avatarSrc} alt={name} className={`${type && "order-last"}`} />
+                <Avatar size="xxl" variant="circular" src={avatarSrc} alt={name} className={`${type && "order-last"}`} />
                 <div className={`flex w-full flex-col gap-0.5 text-left ${type ? "text-right" : "text-left"}`}>
-                    <Typography color="blue-gray">{role}</Typography>
-                    <Typography variant="h5" color="blue-gray">
+                    <Typography color="blue-gray" variant={"h6"}>{role}</Typography>
+                    <Typography variant="h4" color="blue-gray">
                         {name}
                     </Typography>
-                    <Typography color="blue-gray">{description}</Typography>
+                    <Typography color="blue-gray" variant={"paragraph"}>{description}</Typography>
                 </div>
             </CardBody>
         </Card>

@@ -26,7 +26,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
                                                    description,
                                                }) => {
     return (
-        <Card className="mt-6 w-96 h-[30rem] flex flex-col justify-between" shadow={true}>
+        <Card className="mt-6 w-full md:w-96 h-[30rem] flex flex-col justify-between" shadow={true}>
             <CardHeader shadow={false} className="relative h-56">
                 <div className={"flex flex-col justify-center items-start"}>
                     <div className={"p-2 flex flex-row gap-2"}>

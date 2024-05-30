@@ -1,4 +1,6 @@
 import CourseCard from "../components/courses/CourseCard.tsx";
+import { motion } from "framer-motion";
+import {childVariants, routeVariants} from "../Routes.tsx";
 
 const courses = [
     {
@@ -78,19 +80,19 @@ const courses = [
 export default function AllCourses() {
 
     return (
-        <main className={"w-full flex flex-col gap-32 my-16"}>
+        <motion.main variants={routeVariants} initial="initial" animate="final" className={"w-full flex flex-col gap-32 my-16"}>
             <article className={"flex flex-col gap-16 items-center"}>
-                <div className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
+                <motion.div variants={childVariants} initial="initial" animate="final" className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
                     <div className={"h-1/3 flex flex-col gap-8 justify-center items-center"}>
                         <h2 className={"text-5xl font-bold"}>Ponuka kurzov</h2>
                     </div>
-                </div>
+                </motion.div>
             </article>
             <article className={"grid grid-cols-1 grid-rows-9 md:grid-cols-3 md:grid-rows-3 gap-16 w-full"}>
                 {courses.map((course) => (
                     <CourseCard key={course.title} {...course} />
                 ))}
             </article>
-        </main>
+        </motion.main>
     )
 }
