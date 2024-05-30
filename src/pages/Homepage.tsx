@@ -8,7 +8,7 @@ export default function Homepage() {
 
     return (
         <motion.main variants={routeVariants} initial="initial" animate="final" className={"w-full flex flex-col gap-32 my-0 md:my-16"}>
-            <article className={"flex flex-col gap-16 items-center h-screen"}>
+            <motion.article initial={{opacity: 0, x: -400}} whileInView={{opacity: 1, x: 0}} transition={{ duration: 0.5 }} className={"flex flex-col gap-16 items-center h-screen"}>
                 <motion.div variants={childVariants} initial="initial" animate="final" className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
                     <div className={"h-1/3 flex flex-col gap-8 justify-center items-center"}>
                         <h2 className={"text-3xl md:text-5xl font-bold"}>Odhaľte svet príležitostí s Courslio</h2>
@@ -22,8 +22,8 @@ export default function Homepage() {
                         alt="inspirational image"
                     />
                 </motion.div>
-            </article>
-            <article className={"flex flex-col gap-4 text-center md:text-left justify-self-start"}>
+            </motion.article>
+            <motion.article initial={{opacity: 0, x: -400}} whileInView={{opacity: 1, x: 0}} transition={{ duration: 0.5 }} className={"flex flex-col gap-4 text-center md:text-left justify-self-start"}>
                 <h2 className={"text-3xl font-bold"}>Vaše hodnotenie</h2>
                 <h3 className={"text-xl"}>Ako to vidia tí, ktorí už prešli Courslio kurzami?</h3>
                 <div className={"flex items-center flex-col md:flex-row mt-4 gap-8"}>
@@ -46,7 +46,7 @@ export default function Homepage() {
                         quote="Skvelý kurz s praktickými ukážkami a výborným lektorom."
                     />
                 </div>
-            </article>
+            </motion.article>
         </motion.main>
     )
 }

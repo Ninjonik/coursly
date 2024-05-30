@@ -35,8 +35,8 @@ export default function About() {
 
     return (
         <motion.main variants={routeVariants} initial="initial" animate="final" className={"w-full flex flex-col my-16"}>
-            <article className={"flex flex-col gap-16 items-center h-screen"}>
-                <motion.div variants={childVariants} initial="initial" animate="final" className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
+            <motion.article viewport={{ once: true }} initial={{opacity: 0, x: -400}} whileInView={{opacity: 1, x: 0}} transition={{ duration: 0.5 }} className={"flex flex-col gap-16 items-center h-screen"}>
+                <motion.div viewport={{ once: true }} variants={childVariants} initial="initial" animate="final" className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
                     <img
                         className="w-full rounded-lg object-cover object-top"
                         src="img/about.jpg"
@@ -48,7 +48,7 @@ export default function About() {
                             učeniu</h3>
                     </div>
                 </motion.div>
-            </article>
+            </motion.article>
             <article className="flex flex-col gap-16 w-full">
                 {teamMembers.map((member) => (
                     <TeamMemberCard key={member.name} {...member} />

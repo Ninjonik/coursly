@@ -9,14 +9,14 @@ export default function Courses() {
 
     return (
         <motion.main variants={routeVariants} initial="initial" animate="final" className={"w-full flex flex-col gap-32 my-16"}>
-            <article className={"flex flex-col gap-16 items-center"}>
+            <motion.article viewport={{ once: true }} initial={{opacity: 0, x: -400}} whileInView={{opacity: 1, x: 0}} transition={{ duration: 0.5 }} className={"flex flex-col gap-16 items-center"}>
                 <motion.div variants={childVariants} initial="initial" animate="final" className={"flex flex-col gap-8 justify-evenly items-center h-full"}>
                     <div className={"h-1/3 flex flex-col gap-8 justify-center items-center"}>
                         <h2 className={"text-5xl font-bold"}>Ponuka kurzov</h2>
                     </div>
                 </motion.div>
-            </article>
-            <article className={"flex flex-col md:flex-row gap-16 w-full"}>
+            </motion.article>
+            <motion.article viewport={{ once: true }} initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 0.5 }} className={"flex flex-col md:flex-row gap-16 w-full"}>
                 <CourseCard avatarSrc={"img/avatars/256_9.png"} name={"Katarína Kováčová"}
                             role={"Frontend Team Lead @ IGPortals"} cardImageSrc={"img/frontend.png"}
                             title={"Frontend Masters"}
@@ -27,8 +27,8 @@ export default function Courses() {
                 <CourseCard avatarSrc={"img/avatars/256_5.png"} name={"Andrej Baláž"} role={"Native Developer @ Nexly"}
                             cardImageSrc={"img/flutter.jpg"} title={"Flutter 0-100"}
                             description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"}/>
-            </article>
-            <article className={"flex flex-col md:flex-row gap-16 w-full"}>
+            </motion.article>
+            <motion.article viewport={{ once: true }} initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 0.5 }} className={"flex flex-col md:flex-row gap-16 w-full"}>
                 <SmallCourseCard avatarSrc={"img/avatars/256_12.png"}
                             cardImageSrc={"img/js.png"}
                             title={"Svelte Headstart"}
@@ -41,9 +41,9 @@ export default function Courses() {
                             cardImageSrc={"img/smart.jpg"}
                             title={"OOP Fundamentals"}
                             description={"Základy dobrých kodérov."}/>
-            </article>
+            </motion.article>
             <Link to={"/courses/all"}><Button className={"w-72 md:w-96"} color={"deep-purple"}>Zobraziť ponuku všetkých kurzov</Button></Link>
-            <article className={"w-full flex flex-col gap-4 items-center"}>
+            <motion.article viewport={{ once: true }} initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 0.5 }} className={"w-full flex flex-col gap-4 items-center"}>
                 <Carousel className="rounded-xl" autoplay={true}>
                     <img
                         src="img/fullstack.png"
@@ -61,7 +61,7 @@ export default function Courses() {
                         className="h-full w-full object-cover"
                     />
                 </Carousel>
-            </article>
+            </motion.article>
         </motion.main>
     )
 }

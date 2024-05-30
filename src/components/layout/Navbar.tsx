@@ -3,7 +3,7 @@ import {
     Navbar,
     Collapse,
     Typography,
-    IconButton, Button,
+    IconButton, Button, Avatar,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {Link, useLocation} from "react-router-dom";
@@ -77,8 +77,9 @@ export default function AppNavbar() {
                     as="a"
                     href="#"
                     variant="h6"
-                    className="mr-4 cursor-pointer py-1.5"
+                    className="mr-4 cursor-pointer py-1.5 flex flex-row justify-center items-center gap-2"
                 >
+                    <Avatar src={"img/courslio.png"} size={"sm"} />
                     <h1>courslio.</h1>
                 </Typography>
                 <div className="hidden lg:block">
