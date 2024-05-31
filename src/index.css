@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.custom-navbar {
+    --tw-backdrop-blur: blur(0px) !important;
+    --tw-backdrop-saturate: saturate(0) !important;
+    --tw-bg-opacity: 1 !important;
+}

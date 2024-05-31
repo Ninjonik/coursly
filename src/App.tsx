@@ -1,4 +1,3 @@
-import './App.css'
 import Navbar from "./components/layout/Navbar.tsx";
 import AppFooter from "./components/layout/Footer.tsx";
 import {HashRouter} from "react-router-dom";
