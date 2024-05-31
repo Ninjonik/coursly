@@ -88,7 +88,7 @@ export default function AllCourses() {
                     </div>
                 </motion.div>
             </motion.article>
-            <motion.article initial={{opacity: 0, x: -400}} whileInView={{opacity: 1, x: 0}} transition={{ duration: 0.5 }} className={"grid grid-cols-1 grid-rows-9 md:grid-cols-3 md:grid-rows-3 gap-16 w-full"}>
+            <motion.article initial={{opacity: 0, x: -400}} whileInView={{opacity: 1, x: 0}} transition={{ duration: 0.5 }} className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-full"}>
                 {courses.map((course) => (
                     <CourseCard key={course.title} {...course} />
                 ))}

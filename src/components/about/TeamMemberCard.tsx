@@ -11,11 +11,11 @@ interface TeamMemberProps {
 
 export default function TeamMemberCard({ name, role, description, avatarSrc, type }: TeamMemberProps) {
     return (
-        <motion.div initial={{x: -400}} whileInView={{x: 0}} transition={{ duration: 1 }} className={`w-full md:w-2/3 ${type && "place-self-end"}`}>
+        <motion.div initial={{x: -200}} whileInView={{x: 0}} transition={{ duration: 1 }} className={`w-full md:w-2/3 ${type && "md:place-self-end"}`}>
             <Card color="transparent" shadow={false} className={`w-full p-4`}>
                 <CardBody className="mb-6 p-0 flex flex-row gap-4">
-                    <Avatar size="xxl" variant="circular" src={avatarSrc} alt={name} className={`${type && "order-last"}`} />
-                    <div className={`flex w-full flex-col gap-0.5 text-left ${type ? "text-right" : "text-left"}`}>
+                    <Avatar size="xxl" variant="circular" src={avatarSrc} alt={name} className={`${type && "md:order-last"}`} />
+                    <div className={`flex w-full flex-col gap-0.5 text-left ${type ? "md:text-right" : "text-left"}`}>
                         <Typography color="blue-gray" variant={"h6"}>{role}</Typography>
                         <Typography variant="h4" color="blue-gray">
                             {name}

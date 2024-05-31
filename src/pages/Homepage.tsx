@@ -2,6 +2,7 @@ import {Button} from "@material-tailwind/react";
 import ReviewCard from "../components/homepage/ReviewCard.tsx";
 import { motion } from "framer-motion";
 import {childVariants, routeVariants} from "../Routes.tsx";
+import {Link} from "react-router-dom";
 
 export default function Homepage() {
 
@@ -14,7 +15,7 @@ export default function Homepage() {
                         <h2 className={"text-3xl md:text-5xl font-bold"}>Odhaľte svet príležitostí s Courslio</h2>
                         <h3 className={"text-lg md:text-xl"}>Získajte prístup k najlepším kurzom, ktoré vám pomôžu na ceste k
                             úspechu</h3>
-                        <Button color={"purple"} className={"w-64"}>Odkryť skrytý talent</Button>
+                        <Link to={"/courses"}><Button color={"purple"} className={"w-64"}>Odhaliť skrytý talent</Button></Link>
                     </div>
                     <img
                         className="h-2/3 w-full rounded-lg object-cover object-top"

@@ -33,7 +33,7 @@ export default function SmallCourseCardProps({avatarSrc, cardImageSrc, title, de
             <img
                 src={cardImageSrc}
                 alt={title}
-                className={"w-32 h-32 md:w-16 md:h-16"}
+                className={"w-16 h-16"}
             />
         </Card>
     );
